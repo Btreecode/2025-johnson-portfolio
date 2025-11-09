@@ -180,8 +180,7 @@ function ProfileSection() {
 
 function ArtsSection() {
   const { artworks } = portfolioData;
-  const [selectedArtwork, setSelectedArtwork] =
-    (useState < Artwork) | (null > null);
+  const [selectedArtwork, setSelectedArtwork] = useState(null);
 
   return (
     <div className="space-y-8">
