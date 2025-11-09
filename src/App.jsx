@@ -10,18 +10,8 @@ import {
   Sun,
   Star,
   X,
-  type LucideIcon,
 } from "lucide-react";
 import portfolioData from "./data/portfolio.json";
-
-interface Artwork {
-  id: string;
-  title: string;
-  medium: string;
-  year: string;
-  description: string;
-  imageUrl: string;
-}
 
 export default function App() {
   return (
@@ -34,7 +24,7 @@ export default function App() {
 function Portfolio() {
   const [activeSection, setActiveSection] = useState("profile");
 
-  const sections: Array<{ id: string; name: string; icon: LucideIcon }> = [
+  const sections = [
     { id: "profile", name: "Profile", icon: User },
     { id: "arts", name: "Arts", icon: Palette },
     { id: "coding", name: "Coding", icon: Laptop },
@@ -190,7 +180,8 @@ function ProfileSection() {
 
 function ArtsSection() {
   const { artworks } = portfolioData;
-  const [selectedArtwork, setSelectedArtwork] = useState<Artwork | null>(null);
+  const [selectedArtwork, setSelectedArtwork] =
+    (useState < Artwork) | (null > null);
 
   return (
     <div className="space-y-8">
